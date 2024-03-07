@@ -1,10 +1,10 @@
-cabecalho {
+.cabecalho {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 40px;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #0D6EFD;
   padding-bottom: 40px;
 }
 
