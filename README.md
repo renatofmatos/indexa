@@ -1,7 +1,7 @@
 # Indexa
 
 ## Resumo
- Essa aplicação foi desenvolvimento para testar os conhecimento adiquiridos no curso de front-end da Alura.
+ Essa aplicação foi desenvolvimento para testar os conhecimento adiquiridos no curso de Angular da Alura.
  
  ## Tecnologias utilizadas
  - HTML
