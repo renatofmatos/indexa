@@ -13,18 +13,18 @@ import { Contato } from '../../componentes/contato/contato';
 
 
 @Component({
-  selector: 'app-lista-contatos',
-  standalone: true,
-  imports: [CommonModule,
-            ContainerComponent,
-            CabecalhoComponent,
-            SeparadorComponent,
-            ContatoComponent,
-            FormsModule,
-            FormularioContatoComponent,
-            RouterLink],
-  templateUrl: './lista-contatos.component.html',
-  styleUrl: './lista-contatos.component.css'
+    selector: 'app-lista-contatos',
+    standalone: true,
+    templateUrl: './lista-contatos.component.html',
+    styleUrl: './lista-contatos.component.css',
+    imports: [CommonModule,
+        ContainerComponent,
+        CabecalhoComponent,
+        SeparadorComponent,
+        ContatoComponent,
+        FormsModule,
+        FormularioContatoComponent,
+        RouterLink]
 })
 export class ListaContatosComponent implements OnInit{
 
@@ -36,7 +36,9 @@ export class ListaContatosComponent implements OnInit{
   constructor(private contatoService: ContatoService) {}
 
   ngOnInit() {
-    this.contatos = this.contatoService.obterContatos();
+    this.contatoService.obterContatos().subscribe(listaContatos => {
+      this.contatos = listaContatos;
+    });
   }
 
   private removerAcentos(texto: string): string {
